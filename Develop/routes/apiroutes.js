@@ -1,16 +1,22 @@
+// Creates a new instance of express router called apiRouter
 const apiRouter = require('express').Router();
+// Imports the ability to read and write files
 const fs = require('fs');
-const path = require('path');
-const { v4: uuidv4 } = require('uuid'); // For generating unique IDs, install with `npm install uuid`
+// Imports the ability to join paths etc
+const path = require('path')
+// Imports uuidv4 for generating unique IDs
+const { v4: uuidv4 } = require('uuid');
 
 // Function to read and write notes to the db.json file
 const notesFilePath = path.join(__dirname, '../db/db.json');
 
+// Function using fs to read notes from db
 function readNotes() {
   const notesData = fs.readFileSync(notesFilePath, 'utf-8');
   return JSON.parse(notesData);
 }
 
+// Function using fs to write new notes db
 function writeNotes(notes) {
   fs.writeFileSync(notesFilePath, JSON.stringify(notes, null, 2));
 }
@@ -48,5 +54,5 @@ apiRouter.post('/notes', (req, res) => {
 
   res.status(201).json(newNote);
 });
-
+// Exports this file as apiRouter
 module.exports = apiRouter;

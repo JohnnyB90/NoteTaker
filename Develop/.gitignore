@@ -1,1 +1,2 @@
+#Ensures we do not push the file with all of the node modules or anything else added here. 
 /node_modules

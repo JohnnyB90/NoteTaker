@@ -26,9 +26,10 @@ Add notes to a list with a title to reference at later dates as reminders etc.
 
 ## Installation
 
-There are no installation processes. Simply go to the website listed here and begin adding notes.
+There are no installation processes. Simply go to the website listed here https://stark-headland-26030.herokuapp.com/ and begin adding notes.
 
 ## Photo
+![image](https://user-images.githubusercontent.com/117334322/233811276-d71d57fa-7e45-4130-b1bc-b8637000732e.png)
 
 
 ## Usage
